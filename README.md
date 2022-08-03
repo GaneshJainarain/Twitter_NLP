@@ -11,3 +11,10 @@ pip install transformers
 ```python
 pip install scipy
 ```
+
+### We are using tweet data, the construction of a tweet can be broken down into four categories:
+- Text data: "It is cold outside brr"
+- Emojis 🙏🏽
+- Mentioning of a user: "@JaneDoe"
+- Hyperlinks: "https:linktowebsite.com"
+
