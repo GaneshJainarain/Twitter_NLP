@@ -14,7 +14,23 @@ pip install scipy
 
 ### We are using tweet data, the construction of a tweet can be broken down into four categories:
 - Text data: "It is cold outside brr"
-- Emojis 🙏🏽
+- Emojis: 🙏🏽
 - Mentioning of a user: "@JaneDoe"
 - Hyperlinks: "https:linktowebsite.com"
 
+- Preprocessesing Phase
+```python
+"
+tweet_words = []
+for word in tweet.split(' '):
+    if word.startswith('@') and len(word) > 1:
+        word = '@user'
+
+    elif word.startswith('http'):
+        word = "http"
+    tweet_words.append(word)
+    
+#Putting our tweet back together:
+tweet_processed = " ".join(tweet_words)
+print(tweet_processed)
+```
